@@ -1,96 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230128 11:32:20.985" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230128 11:51:23.066" rpa="false" schemaversion="3">
 <suite id="s1" name="1 Wipedia" source="C:\Users\vdi-student\PycharmProjects\robot_basic_tmp\1_wipedia.robot">
-<test id="s1-t1" name="Unsuccessful Login To Wikipedia" line="23">
+<test id="s1-t1" name="Search in Wikipedia" line="20">
+<kw name="Log In Wikipedia">
+<arg>${wikipedia_login}</arg>
+<arg>${wikipedia_password}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pl.wikipedia.org</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230128 11:32:21.592" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
-<status status="PASS" starttime="20230128 11:32:21.592" endtime="20230128 11:32:25.326"/>
+<msg timestamp="20230128 11:51:23.501" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<status status="PASS" starttime="20230128 11:51:23.501" endtime="20230128 11:51:26.650"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:pt-login</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230128 11:32:25.330" level="INFO">Clicking element 'id:pt-login'.</msg>
-<status status="PASS" starttime="20230128 11:32:25.329" endtime="20230128 11:32:26.492"/>
+<msg timestamp="20230128 11:51:26.651" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230128 11:51:26.650" endtime="20230128 11:51:27.717"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:wpName1</arg>
-<arg>${wikipedia_login}</arg>
+<arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230128 11:32:26.494" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
-<status status="PASS" starttime="20230128 11:32:26.493" endtime="20230128 11:32:26.897"/>
+<msg timestamp="20230128 11:51:27.718" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230128 11:51:27.717" endtime="20230128 11:51:27.904"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:wpPassword1</arg>
-<arg>123123</arg>
+<arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230128 11:32:26.899" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
-<msg timestamp="20230128 11:32:26.997" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230128 11:32:27.159" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230128 11:32:26.898" endtime="20230128 11:32:27.159"/>
+<msg timestamp="20230128 11:51:27.905" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230128 11:51:27.975" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230128 11:51:28.071" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230128 11:51:27.904" endtime="20230128 11:51:28.071"/>
 </kw>
 <kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
 <arg>id:wpRemember</arg>
 <doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
-<msg timestamp="20230128 11:32:27.160" level="INFO">Verifying checkbox 'id:wpRemember' is not selected.</msg>
-<status status="PASS" starttime="20230128 11:32:27.160" endtime="20230128 11:32:27.200"/>
+<msg timestamp="20230128 11:51:28.072" level="INFO">Verifying checkbox 'id:wpRemember' is not selected.</msg>
+<status status="PASS" starttime="20230128 11:51:28.071" endtime="20230128 11:51:28.119"/>
 </kw>
 <kw name="Select Checkbox" library="SeleniumLibrary">
 <arg>id:wpRemember</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20230128 11:32:27.201" level="INFO">Selecting checkbox 'id:wpRemember'.</msg>
-<status status="PASS" starttime="20230128 11:32:27.200" endtime="20230128 11:32:27.299"/>
+<msg timestamp="20230128 11:51:28.119" level="INFO">Selecting checkbox 'id:wpRemember'.</msg>
+<status status="PASS" starttime="20230128 11:51:28.119" endtime="20230128 11:51:28.246"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:wpLoginAttempt</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230128 11:32:27.301" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
-<status status="PASS" starttime="20230128 11:32:27.300" endtime="20230128 11:32:27.559"/>
+<msg timestamp="20230128 11:51:28.247" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230128 11:51:28.246" endtime="20230128 11:51:28.455"/>
+</kw>
+<status status="PASS" starttime="20230128 11:51:23.501" endtime="20230128 11:51:28.455"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>searchInput</arg>
+<arg>Lewandowska Anna</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230128 11:51:28.458" level="INFO">Typing text 'Lewandowska Anna' into text field 'searchInput'.</msg>
+<status status="PASS" starttime="20230128 11:51:28.457" endtime="20230128 11:51:28.792"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:searchButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230128 11:51:28.794" level="INFO">Clicking button 'id:searchButton'.</msg>
+<status status="PASS" starttime="20230128 11:51:28.793" endtime="20230128 11:51:30.562"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230128 11:51:35.564" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230128 11:51:30.563" endtime="20230128 11:51:35.564"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230128 11:51:35.782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230128 11:51:35.567" endtime="20230128 11:51:35.782"/>
+</kw>
+<status status="PASS" starttime="20230128 11:51:23.501" endtime="20230128 11:51:35.782"/>
+</test>
+<test id="s1-t2" name="Unsuccessful Login To Wikipedia" line="27">
+<kw name="Log In Wikipedia">
+<arg>${wikipedia_login}</arg>
+<arg>123123</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230128 11:51:35.786" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<status status="PASS" starttime="20230128 11:51:35.786" endtime="20230128 11:51:38.486"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230128 11:51:38.487" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230128 11:51:38.486" endtime="20230128 11:51:39.349"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230128 11:51:39.351" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230128 11:51:39.350" endtime="20230128 11:51:39.523"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230128 11:51:39.524" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230128 11:51:39.594" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230128 11:51:39.657" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230128 11:51:39.524" endtime="20230128 11:51:39.657"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>id:wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20230128 11:51:39.657" level="INFO">Verifying checkbox 'id:wpRemember' is not selected.</msg>
+<status status="PASS" starttime="20230128 11:51:39.657" endtime="20230128 11:51:39.696"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>id:wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230128 11:51:39.697" level="INFO">Selecting checkbox 'id:wpRemember'.</msg>
+<status status="PASS" starttime="20230128 11:51:39.696" endtime="20230128 11:51:39.892"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230128 11:51:39.893" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230128 11:51:39.892" endtime="20230128 11:51:40.128"/>
+</kw>
+<status status="PASS" starttime="20230128 11:51:35.785" endtime="20230128 11:51:40.128"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:.mw-message-box-error</arg>
 <arg>timeout=20</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230128 11:32:27.560" endtime="20230128 11:32:37.578"/>
+<status status="PASS" starttime="20230128 11:51:40.143" endtime="20230128 11:52:00.277"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${my_error_message}</var>
 <arg>css:.mw-message-box-error</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230128 11:32:38.096" level="INFO">${my_error_message} = Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
-<status status="PASS" starttime="20230128 11:32:37.672" endtime="20230128 11:32:38.096"/>
+<msg timestamp="20230128 11:52:00.451" level="INFO">${my_error_message} = Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
+<status status="PASS" starttime="20230128 11:52:00.278" endtime="20230128 11:52:00.451"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${my_error_message}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 11:32:38.098" level="INFO">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
-<status status="PASS" starttime="20230128 11:32:38.097" endtime="20230128 11:32:38.098"/>
+<msg timestamp="20230128 11:52:00.452" level="INFO">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
+<status status="PASS" starttime="20230128 11:52:00.452" endtime="20230128 11:52:00.452"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${my_error_message}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230128 11:32:38.103" endtime="20230128 11:32:38.104"/>
+<status status="PASS" starttime="20230128 11:52:00.453" endtime="20230128 11:52:00.453"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${error_message}</arg>
 <arg>${my_error_message}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230128 11:32:38.104" endtime="20230128 11:32:38.105"/>
+<status status="PASS" starttime="20230128 11:52:00.453" endtime="20230128 11:52:00.454"/>
 </kw>
-<status status="PASS" starttime="20230128 11:32:21.592" endtime="20230128 11:32:38.105"/>
+<status status="PASS" starttime="20230128 11:51:35.784" endtime="20230128 11:52:00.454"/>
 </test>
-<status status="PASS" starttime="20230128 11:32:20.985" endtime="20230128 11:32:38.107"/>
+<status status="PASS" starttime="20230128 11:51:23.066" endtime="20230128 11:52:00.456"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="1 Wipedia">1 Wipedia</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="1 Wipedia">1 Wipedia</stat>
 </suite>
 </statistics>
 <errors>
