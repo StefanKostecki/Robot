@@ -8,7 +8,7 @@ ${string}    piesek
 *** Test Cases ***
 For Loop In Range With Index
     FOR    ${i}    IN RANGE    4
-        Log    ${imiona}[${i}] ${nazwisko}[${i}]
+        Log   ${imiona}[${i}] ${nazwisko}[${i}]
     END
 
 
