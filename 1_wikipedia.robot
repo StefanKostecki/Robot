@@ -1,13 +1,17 @@
 *** Settings ***
 Library  SeleniumLibrary
+Test Setup  OPEN WIKIPEDIA
+Test Teardown  Close Browser
+
 *** Variables ***
 ${wikipedia_login}    RobotTests
 ${wikipedia_password}    RobotFramewok
 ${error_message}    Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.
 *** Keywords ***
+OPEN WIKIPEDIA
+    Open Browser    https://pl.wikipedia.org    Chrome
 Log In Wikipedia
     [Arguments]  ${login}    ${password}
-    Open Browser    https://pl.wikipedia.org    Chrome
     Click Element   id:pt-login
     Input Text    id:wpName1    ${login}
     Input Password    id:wpPassword1    ${password}
@@ -22,7 +26,7 @@ Search_in_Wikipedia
     Input Text    searchInput    Lewandowska Anna
     Click Button    id:searchButton
     Sleep    5
-    Capture Page Screenshot     #screen.png
+#    Capture Page Screenshot     #screen.png
 
 Unsuccessful_Login_To_Wikipedia
     Log In Wikipedia    ${wikipedia_login}     123123
