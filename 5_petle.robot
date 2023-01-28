@@ -1,6 +1,7 @@
 *** Variables ***
 ${string}    piesek
 @{list}     pierwszy    drugi     trzeci    czwarty    piaty
+@{list_of_numbers}    1    2    3    4    5
 &{dictionary}      slowo=${string}   numer=30    lista=@{list}
 @{imiona}    Kamil    Marta    Augusto    Marek
 @{nazwisko}    Kowalski    malinowski    malinowski    Nowak    nijaki
@@ -12,17 +13,14 @@ For Loop In Dictionary
 		Log    ${keys_and_values}
 	END
 
-
 For Loop In Range With Index
 	FOR    ${i}    IN RANGE    4
 		Log   ${imiona}[${i}] ${nazwisko}[${i}]
 	END
 
-
-
 For Loop In List
-	FOR    ${i}    IN    @{list}
-		Log    ${i}
+	FOR    ${item}    IN    @{list_of_numbers}
+	    IF    ${item} == 3    Log    ${item}
 	END
 
 For Loop In Range 10
