@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230128 13:20:29.321" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230128 13:29:06.546" rpa="false" schemaversion="3">
 <suite id="s1" name="5 Petle" source="C:\Users\vdi-student\PycharmProjects\robot_basic_tmp\5_petle.robot">
-<test id="s1-t1" name="For Loop In Range With Index" line="9">
+<test id="s1-t1" name="For Loop In Dictionary" line="9">
+<kw name="Log" library="BuiltIn">
+<arg>${dictionary}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230128 13:29:06.586" level="INFO">{'slowo': 'piesek', 'numer': '30', 'lista': ['pierwszy', 'drugi', 'trzeci', 'czwarty', 'piaty']}</msg>
+<status status="PASS" starttime="20230128 13:29:06.581" endtime="20230128 13:29:06.586"/>
+</kw>
+<for flavor="IN">
+<var>${keys_and_values}</var>
+<value>&amp;{dictionary}</value>
+<iter>
+<var name="${keys_and_values}">('slowo', 'piesek')</var>
+<kw name="Log" library="BuiltIn">
+<arg>${keys_and_values}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230128 13:29:06.586" level="INFO">('slowo', 'piesek')</msg>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.586"/>
+</kw>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.586"/>
+</iter>
+<iter>
+<var name="${keys_and_values}">('numer', '30')</var>
+<kw name="Log" library="BuiltIn">
+<arg>${keys_and_values}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230128 13:29:06.586" level="INFO">('numer', '30')</msg>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.586"/>
+</kw>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.586"/>
+</iter>
+<iter>
+<var name="${keys_and_values}">('lista', ['pierwszy', 'drugi', 'trzeci', 'czwarty', 'piaty'])</var>
+<kw name="Log" library="BuiltIn">
+<arg>${keys_and_values}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230128 13:29:06.586" level="INFO">('lista', ['pierwszy', 'drugi', 'trzeci', 'czwarty', 'piaty'])</msg>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.586"/>
+</kw>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.586"/>
+</iter>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.586"/>
+</for>
+<status status="PASS" starttime="20230128 13:29:06.581" endtime="20230128 13:29:06.586"/>
+</test>
+<test id="s1-t2" name="For Loop In Range With Index" line="16">
 <for flavor="IN RANGE">
 <var>${i}</var>
 <value>4</value>
@@ -10,46 +54,46 @@
 <kw name="Log" library="BuiltIn">
 <arg>${imiona}[${i}] ${nazwisko}[${i}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.361" level="INFO">Kamil Kowalski</msg>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<msg timestamp="20230128 13:29:06.591" level="INFO">Kamil Kowalski</msg>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Log" library="BuiltIn">
 <arg>${imiona}[${i}] ${nazwisko}[${i}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.361" level="INFO">Marta malinowski</msg>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<msg timestamp="20230128 13:29:06.591" level="INFO">Marta malinowski</msg>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Log" library="BuiltIn">
 <arg>${imiona}[${i}] ${nazwisko}[${i}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.361" level="INFO">Augusto malinowski</msg>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<msg timestamp="20230128 13:29:06.591" level="INFO">Augusto malinowski</msg>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
 <kw name="Log" library="BuiltIn">
 <arg>${imiona}[${i}] ${nazwisko}[${i}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.361" level="INFO">Marek Nowak</msg>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<msg timestamp="20230128 13:29:06.591" level="INFO">Marek Nowak</msg>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.361" endtime="20230128 13:20:29.361"/>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </iter>
-<status status="PASS" starttime="20230128 13:20:29.356" endtime="20230128 13:20:29.361"/>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.591"/>
 </for>
-<status status="PASS" starttime="20230128 13:20:29.356" endtime="20230128 13:20:29.366"/>
+<status status="PASS" starttime="20230128 13:29:06.586" endtime="20230128 13:29:06.591"/>
 </test>
-<test id="s1-t2" name="For Loop In List" line="16">
+<test id="s1-t3" name="For Loop In List" line="23">
 <for flavor="IN">
 <var>${i}</var>
 <value>@{list}</value>
@@ -58,56 +102,56 @@
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.366" level="INFO">pierwszy</msg>
-<status status="PASS" starttime="20230128 13:20:29.366" endtime="20230128 13:20:29.366"/>
+<msg timestamp="20230128 13:29:06.591" level="INFO">pierwszy</msg>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.366" endtime="20230128 13:20:29.366"/>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.591"/>
 </iter>
 <iter>
 <var name="${i}">drugi</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.371" level="INFO">drugi</msg>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">drugi</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
 <iter>
 <var name="${i}">trzeci</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.371" level="INFO">trzeci</msg>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">trzeci</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
 <iter>
 <var name="${i}">czwarty</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.371" level="INFO">czwarty</msg>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">czwarty</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
 <iter>
 <var name="${i}">piaty</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.371" level="INFO">piaty</msg>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">piaty</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.371"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
-<status status="PASS" starttime="20230128 13:20:29.366" endtime="20230128 13:20:29.371"/>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.596"/>
 </for>
-<status status="PASS" starttime="20230128 13:20:29.366" endtime="20230128 13:20:29.371"/>
+<status status="PASS" starttime="20230128 13:29:06.591" endtime="20230128 13:29:06.596"/>
 </test>
-<test id="s1-t3" name="For Loop In Range 10" line="21">
+<test id="s1-t4" name="For Loop In Range 10" line="28">
 <for flavor="IN RANGE">
 <var>${i}</var>
 <value>10</value>
@@ -116,106 +160,106 @@
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.376" level="INFO">0</msg>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">0</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.376" level="INFO">1</msg>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">1</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.376" level="INFO">2</msg>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">2</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.376" level="INFO">3</msg>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">3</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.596"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.376" level="INFO">4</msg>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<msg timestamp="20230128 13:29:06.596" level="INFO">4</msg>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.601"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.601"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.376" level="INFO">5</msg>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<msg timestamp="20230128 13:29:06.601" level="INFO">5</msg>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.376"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </iter>
 <iter>
 <var name="${i}">6</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.381" level="INFO">6</msg>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.381"/>
+<msg timestamp="20230128 13:29:06.601" level="INFO">6</msg>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.376" endtime="20230128 13:20:29.381"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </iter>
 <iter>
 <var name="${i}">7</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.381" level="INFO">7</msg>
-<status status="PASS" starttime="20230128 13:20:29.381" endtime="20230128 13:20:29.381"/>
+<msg timestamp="20230128 13:29:06.601" level="INFO">7</msg>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.381" endtime="20230128 13:20:29.381"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </iter>
 <iter>
 <var name="${i}">8</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.381" level="INFO">8</msg>
-<status status="PASS" starttime="20230128 13:20:29.381" endtime="20230128 13:20:29.381"/>
+<msg timestamp="20230128 13:29:06.601" level="INFO">8</msg>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.381" endtime="20230128 13:20:29.381"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </iter>
 <iter>
 <var name="${i}">9</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.381" level="INFO">9</msg>
-<status status="PASS" starttime="20230128 13:20:29.381" endtime="20230128 13:20:29.381"/>
+<msg timestamp="20230128 13:29:06.601" level="INFO">9</msg>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.381" endtime="20230128 13:20:29.381"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </iter>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.381"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.601"/>
 </for>
-<status status="PASS" starttime="20230128 13:20:29.371" endtime="20230128 13:20:29.381"/>
+<status status="PASS" starttime="20230128 13:29:06.596" endtime="20230128 13:29:06.601"/>
 </test>
-<test id="s1-t4" name="For Loop In Range 4 10" line="26">
+<test id="s1-t5" name="For Loop In Range 4 10" line="33">
 <for flavor="IN RANGE">
 <var>${i}</var>
 <value>4</value>
@@ -225,66 +269,66 @@
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.386" level="INFO">4</msg>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<msg timestamp="20230128 13:29:06.601" level="INFO">4</msg>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.601"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.386" level="INFO">5</msg>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<msg timestamp="20230128 13:29:06.606" level="INFO">5</msg>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.606"/>
 </iter>
 <iter>
 <var name="${i}">6</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.386" level="INFO">6</msg>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<msg timestamp="20230128 13:29:06.606" level="INFO">6</msg>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </iter>
 <iter>
 <var name="${i}">7</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.386" level="INFO">7</msg>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<msg timestamp="20230128 13:29:06.606" level="INFO">7</msg>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </iter>
 <iter>
 <var name="${i}">8</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.386" level="INFO">8</msg>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<msg timestamp="20230128 13:29:06.606" level="INFO">8</msg>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </iter>
 <iter>
 <var name="${i}">9</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.386" level="INFO">9</msg>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<msg timestamp="20230128 13:29:06.606" level="INFO">9</msg>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.606"/>
 </iter>
-<status status="PASS" starttime="20230128 13:20:29.386" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.606"/>
 </for>
-<status status="PASS" starttime="20230128 13:20:29.381" endtime="20230128 13:20:29.386"/>
+<status status="PASS" starttime="20230128 13:29:06.601" endtime="20230128 13:29:06.606"/>
 </test>
-<test id="s1-t5" name="For Loop In Range 4 30 3" line="31">
+<test id="s1-t6" name="For Loop In Range 4 30 3" line="38">
 <for flavor="IN RANGE">
 <var>${i}</var>
 <value>4</value>
@@ -295,105 +339,105 @@
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.391" level="INFO">4</msg>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">4</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">7</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.391" level="INFO">7</msg>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">7</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">10</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.391" level="INFO">10</msg>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">10</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">13</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.391" level="INFO">13</msg>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">13</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">16</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.391" level="INFO">16</msg>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">16</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.391"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">19</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.396" level="INFO">19</msg>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.396"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">19</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.396"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">22</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.396" level="INFO">22</msg>
-<status status="PASS" starttime="20230128 13:20:29.396" endtime="20230128 13:20:29.396"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">22</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.396" endtime="20230128 13:20:29.396"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">25</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.396" level="INFO">25</msg>
-<status status="PASS" starttime="20230128 13:20:29.396" endtime="20230128 13:20:29.396"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">25</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.396" endtime="20230128 13:20:29.396"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
 <iter>
 <var name="${i}">28</var>
 <kw name="Log" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230128 13:20:29.396" level="INFO">28</msg>
-<status status="PASS" starttime="20230128 13:20:29.396" endtime="20230128 13:20:29.396"/>
+<msg timestamp="20230128 13:29:06.611" level="INFO">28</msg>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </kw>
-<status status="PASS" starttime="20230128 13:20:29.396" endtime="20230128 13:20:29.396"/>
+<status status="PASS" starttime="20230128 13:29:06.611" endtime="20230128 13:29:06.611"/>
 </iter>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.396"/>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.611"/>
 </for>
-<status status="PASS" starttime="20230128 13:20:29.391" endtime="20230128 13:20:29.396"/>
+<status status="PASS" starttime="20230128 13:29:06.606" endtime="20230128 13:29:06.611"/>
 </test>
-<status status="PASS" starttime="20230128 13:20:29.321" endtime="20230128 13:20:29.396"/>
+<status status="PASS" starttime="20230128 13:29:06.546" endtime="20230128 13:29:06.616"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="5 Petle">5 Petle</stat>
+<stat pass="6" fail="0" skip="0" id="s1" name="5 Petle">5 Petle</stat>
 </suite>
 </statistics>
 <errors>
