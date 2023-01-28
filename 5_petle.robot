@@ -7,6 +7,18 @@ ${string}    piesek
 @{nazwisko}    Kowalski    malinowski    malinowski    Nowak    nijaki
 
 *** Test Cases ***
+Nest Loops
+    @{letters}    Create List    a    b    c    d
+    Log    ${letters}
+    @{numbers}    Create List    ${1}    ${2}    ${3}
+    Log    ${numbers}
+    FOR    ${letter}    IN    ${letters}
+        FOR    ${number}    IN    ${numbers}
+            Log   ${letter} ${number}
+        END
+    END
+
+
 For Loop In Dictionary
 	Log    ${dictionary}
 	FOR    ${keys_and_values}    IN    &{dictionary}
