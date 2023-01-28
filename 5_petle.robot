@@ -2,8 +2,17 @@
 ${string}    piesek
 @{list}     pierwszy    drugi     trzeci    czwarty    piaty
 &{dictionary}      slowo=${string}   numer=30    lista=@{list}
+@{imiona}    Kamil    Marta    Augusto    Marek
+@{nazwisko}    Kowalski    malinowski    malinowski    Nowak    nijaki
 
 *** Test Cases ***
+For Loop In Range With Index
+    FOR    ${i}    IN RANGE    4
+        Log    ${imiona}[${i}] ${nazwisko}[${i}]
+    END
+
+
+
 For Loop In List
     FOR    ${i}    IN    @{list}
         Log    ${i}
