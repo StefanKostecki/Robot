@@ -8,17 +8,21 @@ Library  SeleniumLibrary
 @{password}  pass1  pass2  pass3  pass4  pass5
 @{message}    Dziekujemy za zalozenie nowego konta.
 *** Keywords ***
-*** Test Cases ***
-Registration In Forum
+Open Browser
     Open Browser    https://gotujmy.pl/forum/    Chrome
+    Maximize Browser Window
+
+Registration In Forum
+    [Arguments]    ${name}    ${password}
+    Scrol Element Into View     //*[@id="tcf277-permisions-modal"]/div[3]/div/button[2]
     Run Keyword And Ignore Error    click button    //*[@id="tcf277-permisions-modal"]/div[3]/div/button[2]
     Click Element    //*[@id="navTop"]/nav/ul[1]/li[2]/a
     Run Keyword And Ignore Error    click button    //*[@id="tcf277-permisions-modal"]/div[3]/div/button[2]
 
-    imput text    //*[@id=f_cmu_email"]    kamil@wp.pl
-    imput text    //*[@id=f_cmu_email2"]    kamil@wp.pl
-    imput text    //*[@id=f_cmu_password"]    haslo
-    imput text    //*[@id=f_cmu_password2"]    haslo
+    imput text    //*[@id=f_cmu_email"]    ${name}
+    imput text    //*[@id=f_cmu_email2"]    ${name}
+    imput text    //*[@id=f_cmu_password"]    ${password}
+    imput text    //*[@id=f_cmu_password2"]    ${password}
     Checkbox Should Not Be Selected    //*[@id'newsletter_ogree"]
     select checkbox     //*[@id'newsletter_ogree"]
     Checkbox Should Not Be Selected  //*[@id="user_register_form"]/fieldset/label[2]/input
@@ -32,4 +36,10 @@ Registration In Forum
     Should Be Equal As Strings    @{my_message}    @{message}
     Capture Page Screenshot
 
+*** Test Cases ***
+Registration Of Multiple User
+    FOR    ${i}    IN RANGE    @{emails}
+        Registration In Forum  @{emails}[${i}]    @{password}[${i}]
+        Log    User    @{emails}[${i}]
+    END
 
