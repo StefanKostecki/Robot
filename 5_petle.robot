@@ -69,3 +69,11 @@ For Loop In Range 4 30 3
 	FOR    ${i}    IN RANGE    4    30    3
 		Log    ${i}
 	END
+
+
+WHILE LOOP
+    ${index}    set variable    10
+    WHILE    ${index} > 0
+        log    ${index}
+        ${index}    evaluate    ${index} - 1
+    END
