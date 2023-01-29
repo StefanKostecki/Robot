@@ -40,6 +40,21 @@ For Loop1
 	    IF    $name == 'Augusto'    Log    ${name}
 	END
 
+FOR LOOP WITH BREAK
+	@{my_list}    create list    Mama    Tato    Pies    Kot    Ptak    I  jeszcze  cos
+	FOR    ${name}    IN    @{my_list}
+	    IF    $name == 'Pies'    BREAK
+	    log    ${name}
+	END
+
+
+FOR LOOP WITH CONTINUE
+	@{my_list}    create list    Mama    Tato    Pies    Kot    Ptak    I  jeszcze  cos
+	FOR    ${name}    IN    @{my_list}
+	    IF    $name == 'Pies'    CONTINUE
+	    log    ${name}
+	END
+
 For Loop In Range 10
 	FOR    ${i}    IN RANGE    10
 		Log    ${i}
