@@ -35,6 +35,11 @@ For Loop In List
 	    IF    ${item} == 3    Log    ${item}
 	END
 
+For Loop1
+	FOR    ${name}    IN    @{imiona}
+	    IF    $name == 'Augusto'    Log    ${name}
+	END
+
 For Loop In Range 10
 	FOR    ${i}    IN RANGE    10
 		Log    ${i}

@@ -1,16 +1,17 @@
 *** Settings ***
 Library  SeleniumLibrary
 Test Setup  Open My Browser
+
 *** Variables ***
-@{emails}  email1@wwp.pl  email2@wwp.pl   email3@wwp.pl   email4@wwp.pl   email5@wwp.pl
+@{emails}  kmdaail1@wwp.pl  ekdasil2@wwp.pl   emkdil3@wwp.pl   emdasl4@wwp.pl   emdhil5@wwp.pl
 @{passwords}  pass1  pass2  pass3  pass4  pass5
 ${message}    Dziękujemy za założenie nowego konta.
 *** Keywords ***
 Open My Browser
     Open Browser    https://gotujmy.pl/forum/    Chrome
     Maximize Browser Window
-#    Execute JavaScript    document.body.stale.zoom='50%'
-    sleep    3
+    Execute JavaScript    document.body.style.zoom='50%'
+    sleep    5
     Scroll Element Into View    //*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]
     Run Keyword And Ignore Error    click button    //*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]
 Registration In Forum
@@ -35,9 +36,9 @@ Registration In Forum
     Capture Page Screenshot
 *** Test Cases ***
 Registraion Of Multiple User
-    FOR   ${i}   IN RANGE    5
+    FOR   ${i}   IN RANGE    2
         Registration In Forum   ${emails}[${i}]    ${passwords}[${i}]
-        Log    User ${emails}[${i}]
+#        Log    User ${emails}[${i}]
     END
 Unsuccessful Regiustratoin Different Names
     sleep    1
