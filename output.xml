@@ -1,66 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20230129 12:35:33.857" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20230129 12:53:08.300" rpa="false" schemaversion="3">
 <suite id="s1" name="11 API" source="C:\Users\vdi-student\PycharmProjects\pythonProject1\Robot\11_API.robot">
 <test id="s1-t1" name="API_GET_TEST_1" line="7">
 <kw name="GET" library="RequestsLibrary">
 <var>${get_response}</var>
 <arg>https://simple-books-api.glitch.me/status</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20230129 12:35:34.713" level="INFO">GET Request : url=https://simple-books-api.glitch.me/status 
+<msg timestamp="20230129 12:53:09.016" level="INFO">GET Request : url=https://simple-books-api.glitch.me/status 
  path_url=/status 
  headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230129 12:35:34.713" level="INFO">GET Response : url=https://simple-books-api.glitch.me/status 
+<msg timestamp="20230129 12:53:09.016" level="INFO">GET Response : url=https://simple-books-api.glitch.me/status 
  status=200, reason=OK 
- headers={'Date': 'Sun, 29 Jan 2023 11:34:51 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'Connection': 'keep-alive', 'x-powered-by': 'Express', 'etag': 'W/"f-v/Y1JusChTxrQUzPtNAKycooOTA"'} 
+ headers={'Date': 'Sun, 29 Jan 2023 11:52:25 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'Connection': 'keep-alive', 'x-powered-by': 'Express', 'etag': 'W/"f-v/Y1JusChTxrQUzPtNAKycooOTA"'} 
  body={"status":"OK"} 
  </msg>
-<msg timestamp="20230129 12:35:34.713" level="INFO">${get_response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230129 12:35:34.091" endtime="20230129 12:35:34.713"/>
+<msg timestamp="20230129 12:53:09.016" level="INFO">${get_response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230129 12:53:08.526" endtime="20230129 12:53:09.016"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>status ${get_response}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230129 12:35:34.713" endtime="20230129 12:35:34.717"/>
+<status status="PASS" starttime="20230129 12:53:09.016" endtime="20230129 12:53:09.016"/>
 </kw>
-<status status="PASS" starttime="20230129 12:35:34.091" endtime="20230129 12:35:34.717"/>
-</test>
-<test id="s1-t2" name="API_GET_TEST_2" line="11">
-<kw name="GET" library="RequestsLibrary">
-<var>${get_response}</var>
-<arg>https://simple-books-api.glitch.me/books</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20230129 12:35:35.308" level="INFO">GET Request : url=https://simple-books-api.glitch.me/books 
- path_url=/books 
- headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${register_json}</var>
+<arg>clientName=Kamils</arg>
+<arg>clientEmail=kamils@example.com</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230129 12:53:09.016" level="INFO">${register_json} = {'clientName': 'Kamils', 'clientEmail': 'kamils@example.com'}</msg>
+<status status="PASS" starttime="20230129 12:53:09.016" endtime="20230129 12:53:09.016"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${post_register_response}</var>
+<arg>https://simple-books-api.glitch.me/api-clients/</arg>
+<arg>json=${register_json}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20230129 12:53:09.826" level="INFO">POST Request : url=https://simple-books-api.glitch.me/api-clients/ 
+ path_url=/api-clients/ 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '61', 'Content-Type': 'application/json'} 
+ body=b'{"clientName": "Kamils", "clientEmail": "kamils@example.com"}' 
  </msg>
-<msg timestamp="20230129 12:35:35.308" level="INFO">GET Response : url=https://simple-books-api.glitch.me/books 
- status=200, reason=OK 
- headers={'Date': 'Sun, 29 Jan 2023 11:34:52 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '417', 'Connection': 'keep-alive', 'x-powered-by': 'Express', 'etag': 'W/"1a1-MfqhfTYtZO2sguD1mJq8Vf41WjU"'} 
- body=[{"id":1,"name":"The Russian","type":"fiction","available":true},{"id":2,"name":"Just as I Am","type":"non-fiction","available":false},{"id":3,"name":"The Vanishing Half","type":"fiction","available":true},{"id":4,"name":"The Midnight Library","type":"fiction","available":true},{"id":5,"name":"Untamed","type":"non-fiction","available":true},{"id":6,"name":"Viscount Who Loved Me","type":"fiction","available":true}] 
+<msg timestamp="20230129 12:53:09.826" level="INFO">POST Response : url=https://simple-books-api.glitch.me/api-clients/ 
+ status=201, reason=Created 
+ headers={'Date': 'Sun, 29 Jan 2023 11:52:26 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '82', 'Connection': 'keep-alive', 'x-powered-by': 'Express', 'etag': 'W/"52-uShyH5mt+YEMF8ttcYdJLN/xYK0"'} 
+ body={"accessToken":"2e4f8f0196436b4cc64bca8e0759fffd0ec3d24d0c89db25d22261406b533975"} 
  </msg>
-<msg timestamp="20230129 12:35:35.308" level="INFO">${get_response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230129 12:35:34.717" endtime="20230129 12:35:35.308"/>
+<msg timestamp="20230129 12:53:09.826" level="INFO">${post_register_response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20230129 12:53:09.016" endtime="20230129 12:53:09.826"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>books ${get_response}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230129 12:35:35.308" endtime="20230129 12:35:35.308"/>
-</kw>
-<status status="PASS" starttime="20230129 12:35:34.717" endtime="20230129 12:35:35.308"/>
+<status status="PASS" starttime="20230129 12:53:08.526" endtime="20230129 12:53:09.826"/>
 </test>
-<status status="PASS" starttime="20230129 12:35:33.861" endtime="20230129 12:35:35.313"/>
+<status status="PASS" starttime="20230129 12:53:08.300" endtime="20230129 12:53:09.831"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="11 API">11 API</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="11 API">11 API</stat>
 </suite>
 </statistics>
 <errors>
